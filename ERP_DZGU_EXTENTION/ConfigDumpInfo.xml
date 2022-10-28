@@ -58,7 +58,7 @@
 			<Metadata name="AccumulationRegister.ТоварыОрганизаций.Resource.Количество" id="96fcf773-b8f4-40f2-849a-1a9110e48dd3"/>
 		</Metadata>
 		<Metadata name="Catalog.БИТ_ЗначенияПоказателейАнализовНоменклатуры" id="a81f60c4-d894-44cf-bfa8-f88dd21aaaf6" configVersion="bce88deae67b77ef7baf497219aba25e5ba70304"/>
-		<Metadata name="Catalog.БИТ_ЗначенияПоказателейАнализовНоменклатуры.ObjectModule" id="a81f60c4-d894-44cf-bfa8-f88dd21aaaf6.0" configVersion="d8c7d46d5284632aee36c55d0885b609a0632f27"/>
+		<Metadata name="Catalog.БИТ_ЗначенияПоказателейАнализовНоменклатуры.ObjectModule" id="a81f60c4-d894-44cf-bfa8-f88dd21aaaf6.0" configVersion="024caf6c465f8325445cb63bb919d74b5cde51b8"/>
 		<Metadata name="Catalog.БИТ_ПоказателиАнализовНоменклатуры" id="6e1a05b3-ac38-4288-abb2-90d308ecd7bd" configVersion="f057b3d9a905e7902dc7d55de6dde6211e1adb3c">
 			<Metadata name="Catalog.БИТ_ПоказателиАнализовНоменклатуры.TabularSection.ДопустимыеЗначенияПоказателей.Attribute.ЗначениеПоказателя" id="199db9b3-ec59-4a5b-a25c-0b2f483bd407"/>
 			<Metadata name="Catalog.БИТ_ПоказателиАнализовНоменклатуры.TabularSection.ДопустимыеЗначенияПоказателей" id="491127f5-13b7-4f10-8775-63f89439ab02"/>
