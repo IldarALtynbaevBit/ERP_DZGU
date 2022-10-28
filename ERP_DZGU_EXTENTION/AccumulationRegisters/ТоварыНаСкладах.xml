@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AccumulationRegister uuid="5a2bea31-6ceb-4148-8636-a702da00f8a6">
+		<InternalInfo>
+			<xr:GeneratedType name="AccumulationRegisterRecord.ТоварыНаСкладах" category="Record">
+				<xr:TypeId>051628be-5bba-4802-8fa9-90219088396f</xr:TypeId>
+				<xr:ValueId>138497c8-5e26-4b30-ac32-015667f115a8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterManager.ТоварыНаСкладах" category="Manager">
+				<xr:TypeId>3abcee2a-45c3-48d9-9c46-d542a7c1639b</xr:TypeId>
+				<xr:ValueId>7040be13-2b00-42a9-8ed1-10c6749c74c3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterSelection.ТоварыНаСкладах" category="Selection">
+				<xr:TypeId>15592366-baa5-4e01-b0af-aab4fd48801d</xr:TypeId>
+				<xr:ValueId>1a4cdc8b-ca61-43ba-974a-cc165f5ac27b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterList.ТоварыНаСкладах" category="List">
+				<xr:TypeId>6aefd17f-01fb-4ee5-8c21-1b331eec91bf</xr:TypeId>
+				<xr:ValueId>a55b74a0-0633-490a-a975-225590df4c79</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordSet.ТоварыНаСкладах" category="RecordSet">
+				<xr:TypeId>8a79c2aa-7ba6-4820-b944-f9ec917759ca</xr:TypeId>
+				<xr:ValueId>f29b8957-c457-47e6-8010-91341561fe11</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordKey.ТоварыНаСкладах" category="RecordKey">
+				<xr:TypeId>1eed4145-7583-4160-ac84-6ab379e94929</xr:TypeId>
+				<xr:ValueId>52e48d19-9856-4f45-b84f-a4c9e4670d91</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ТоварыНаСкладах</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>80440cbb-f97b-4620-8eca-b89f9a033f08</ExtendedConfigurationObject>
+			<RegisterType>Balance</RegisterType>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="d214bf31-1608-4ce0-934b-646fe1a49c81">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВНаличии</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2d1fe73e-1f3d-4ee9-9dd1-010dfff742b1</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="46356ee6-be8e-4088-b1a1-2c6b6d2fb28e">
+				<InternalInfo/>
+				<Properties>
+					<Name>КОтгрузке</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>d7a580fb-b3d4-4540-9057-2bf42dbcce49</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="2ef4a9cf-8438-4ed0-874e-425d76f8d7d0">
+				<InternalInfo/>
+				<Properties>
+					<Name>Серия</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>32c528cc-88fa-48ca-967d-eb0035bcc3a8</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>2e2282a7-eada-4329-b569-8234e8d09040</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="ed86e19a-cf03-4f63-91d5-2e9c66c72af9">
+				<InternalInfo/>
+				<Properties>
+					<Name>Номенклатура</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>70b08d50-30e9-4115-9e39-67ef989c58b2</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>190a7469-3325-4d33-b5ec-28a63ac83b06</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="8678ab6c-15fd-4175-9afc-157d0edf6f08">
+				<InternalInfo/>
+				<Properties>
+					<Name>Характеристика</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c9fd5a1a-3aa5-4048-b15e-f8b6a41ab96f</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>89c162bd-68ef-4693-a4a8-19238fa23c62</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="4f6ebbd1-904e-46fb-b55f-9f92361d4064">
+				<InternalInfo/>
+				<Properties>
+					<Name>Назначение</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>cc2a9ed0-e83e-4ca4-a99c-1b3eefba4d77</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>93cdcc55-274b-46c9-8ecd-c61f5d3ceddc</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="d04b01f4-ca85-489e-97c3-8fcafd7b29ea">
+				<InternalInfo/>
+				<Properties>
+					<Name>Склад</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>29d5a4e7-4544-4ed2-a8bf-d541eef13703</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>e63fc7d1-3d01-4fbb-8cbe-9d4bf8fe2126</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</AccumulationRegister>
+</MetaDataObject>

@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаполнить" id="91">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Заполнить</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="92"/>
+			</Button>
+			<Button name="Сформировать" id="81">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Сформировать</CommandName>
+				<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="82"/>
+			</Button>
+			<Button name="СформироватьУдостоверениеКачества" id="131">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СформироватьУдостоверениеКачества</CommandName>
+				<ExtendedTooltip name="СформироватьУдостоверениеКачестваРасширеннаяПодсказка" id="132"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Настройки" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="122"/>
+			<ChildItems>
+				<InputField name="ОтборВидНоменклатуры" id="142">
+					<DataPath>ОтборВидНоменклатуры</DataPath>
+					<ContextMenu name="ОтборВидНоменклатурыКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="ОтборВидНоменклатурыРасширеннаяПодсказка" id="144"/>
+					<Events>
+						<Event name="OnChange">ОтборВидНоменклатурыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ОтборНастройка" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор настройка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор настройка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОтборНастройкаРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<InputField name="Дата" id="115">
+							<DataPath>Объект.Дата</DataPath>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="117"/>
+							<Events>
+								<Event name="OnChange">ДатаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="35">
+							<DataPath>Объект.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Отбор" id="118">
+							<DataPath>ОтборВТЗ</DataPath>
+							<ContextMenu name="ОтборКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ОтборРасширеннаяПодсказка" id="120"/>
+							<Events>
+								<Event name="OnChange">ОтборПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Склады" id="96">
+					<Height>4</Height>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<VerticalStretch>false</VerticalStretch>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.Склады</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СкладыКонтекстноеМеню" id="97"/>
+					<AutoCommandBar name="СкладыКоманднаяПанель" id="98"/>
+					<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="99"/>
+					<SearchStringAddition name="СкладыСтрокаПоиска" id="100">
+						<AdditionSource>
+							<Item>Склады</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СкладыСтрокаПоискаКонтекстноеМеню" id="101"/>
+						<ExtendedTooltip name="СкладыСтрокаПоискаРасширеннаяПодсказка" id="102"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СкладыСостояниеПросмотра" id="103">
+						<AdditionSource>
+							<Item>Склады</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СкладыСостояниеПросмотраКонтекстноеМеню" id="104"/>
+						<ExtendedTooltip name="СкладыСостояниеПросмотраРасширеннаяПодсказка" id="105"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СкладыУправлениеПоиском" id="106">
+						<AdditionSource>
+							<Item>Склады</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СкладыУправлениеПоискомКонтекстноеМеню" id="107"/>
+						<ExtendedTooltip name="СкладыУправлениеПоискомРасширеннаяПодсказка" id="108"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">СкладыПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="СкладыНомерСтроки" id="109">
+							<DataPath>Объект.Склады.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкладыНомерСтрокиКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="СкладыНомерСтрокиРасширеннаяПодсказка" id="111"/>
+						</LabelField>
+						<InputField name="СкладыСклад" id="112">
+							<DataPath>Объект.Склады.Склад</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкладыСкладКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="СкладыСкладРасширеннаяПодсказка" id="114"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<CheckBoxField name="ПоказыватьУдостоверения" id="136">
+					<DataPath>ПоказыватьУдостоверения</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказыватьУдостоверенияКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ПоказыватьУдостоверенияРасширеннаяПодсказка" id="138"/>
+					<Events>
+						<Event name="OnChange">ПоказыватьУдостоверенияПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СертификацияНоменклатуры" id="38">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СертификацияНоменклатуры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СертификацияНоменклатурыКонтекстноеМеню" id="39"/>
+			<AutoCommandBar name="СертификацияНоменклатурыКоманднаяПанель" id="40"/>
+			<ExtendedTooltip name="СертификацияНоменклатурыРасширеннаяПодсказка" id="41"/>
+			<SearchStringAddition name="СертификацияНоменклатурыСтрокаПоиска" id="42">
+				<AdditionSource>
+					<Item>СертификацияНоменклатуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СертификацияНоменклатурыСтрокаПоискаКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СертификацияНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СертификацияНоменклатурыСостояниеПросмотра" id="45">
+				<AdditionSource>
+					<Item>СертификацияНоменклатуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СертификацияНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СертификацияНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СертификацияНоменклатурыУправлениеПоиском" id="48">
+				<AdditionSource>
+					<Item>СертификацияНоменклатуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СертификацияНоменклатурыУправлениеПоискомКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="СертификацияНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="СертификацияНоменклатурыВыбор" id="83">
+					<DataPath>Объект.СертификацияНоменклатуры.Выб</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СертификацияНоменклатурыВыборКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыВыборРасширеннаяПодсказка" id="85"/>
+				</CheckBoxField>
+				<InputField name="СертификацияНоменклатурыАртикул" id="151">
+					<DataPath>Объект.СертификацияНоменклатуры.Артикул</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СертификацияНоменклатурыАртикулКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыАртикулРасширеннаяПодсказка" id="153"/>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыНоменклатура" id="54">
+					<DataPath>Объект.СертификацияНоменклатуры.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СертификацияНоменклатурыНоменклатураКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыНоменклатураРасширеннаяПодсказка" id="56"/>
+				</InputField>
+				<LabelField name="СертификацияНоменклатурыСерияДатаПроизводства" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата производства</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>5</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="СертификацияНоменклатурыСерияДатаПроизводстваКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыСерияДатаПроизводстваРасширеннаяПодсказка" id="80"/>
+				</LabelField>
+				<InputField name="СертификацияНоменклатурыСерия" id="57">
+					<DataPath>Объект.СертификацияНоменклатуры.Серия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СертификацияНоменклатурыСерияКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыСерияРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыСклад" id="60">
+					<DataPath>Объект.СертификацияНоменклатуры.Склад</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СертификацияНоменклатурыСкладКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыСкладРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыОстатокНаСкладе" id="63">
+					<DataPath>Объект.СертификацияНоменклатуры.ОстатокНаСкладе</DataPath>
+					<TitleLocation>Bottom</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СертификацияНоменклатурыОстатокНаСкладеКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыОстатокНаСкладеРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыОстатокНаКарантине" id="66">
+					<DataPath>Объект.СертификацияНоменклатуры.ОстатокНаКарантине</DataPath>
+					<TitleLocation>Bottom</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СертификацияНоменклатурыОстатокНаКарантинеКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыОстатокНаКарантинеРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыСертифицировано" id="69">
+					<DataPath>Объект.СертификацияНоменклатуры.Сертифицировано</DataPath>
+					<TitleLocation>Bottom</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СертификацияНоменклатурыСертифицированоКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыСертифицированоРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыОтказ" id="128">
+					<DataPath>Объект.СертификацияНоменклатуры.Отказ</DataPath>
+					<TitleLocation>Bottom</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СертификацияНоменклатурыОтказКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыОтказРасширеннаяПодсказка" id="130"/>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыУдостоверениеКачества" id="133">
+					<DataPath>Объект.СертификацияНоменклатуры.УдостоверениеКачества</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удостоверение</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="СертификацияНоменклатурыУдостоверениеКачестваКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыУдостоверениеКачестваРасширеннаяПодсказка" id="135"/>
+					<Events>
+						<Event name="StartChoice">СертификацияНоменклатурыУдостоверениеКачестваНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СертификацияНоменклатурыКОформлению" id="72">
+					<DataPath>Объект.СертификацияНоменклатуры.КОформлению</DataPath>
+					<TitleLocation>Bottom</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>7</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="СертификацияНоменклатурыКОформлениюКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="СертификацияНоменклатурыКОформлениюРасширеннаяПодсказка" id="74"/>
+					<Events>
+						<Event name="OnChange">СертификацияНоменклатурыКОформлениюПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.БИТ_АРМПоКонтролюКачества</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.Организация</Field>
+			</Save>
+			<Columns>
+				<AdditionalColumns table="Объект.СертификацияНоменклатуры"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтборВТЗ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор в таблице</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.БИТ_ОтборВАРМКонтрольКачества</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПоказыватьУдостоверения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удостоверения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборВидНоменклатуры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор вид номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СертификацияНоменклатуры</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СертификацияНоменклатуры.ОстатокНаСкладе</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.СертификацияНоменклатуры.Сертифицировано</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СертификацияНоменклатуры</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.СертификацияНоменклатуры.ОстатокНаСкладе</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">Объект.СертификацияНоменклатуры.Сертифицировано</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.СертификацияНоменклатуры.Сертифицировано</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СертификацияНоменклатуры</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СертификацияНоменклатуры.Отказ</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSalmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать сертификацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="Заполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+		<Command name="СформироватьУдостоверениеКачества" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать удостоверение качества</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать удостоверение качества</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьУдостоверениеКачества</Action>
+		</Command>
+	</Commands>
+</Form>

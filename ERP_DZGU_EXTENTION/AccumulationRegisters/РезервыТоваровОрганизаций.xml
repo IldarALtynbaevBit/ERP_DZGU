@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AccumulationRegister uuid="d4278630-b4af-47d2-b6aa-f508e0b6208b">
+		<InternalInfo>
+			<xr:GeneratedType name="AccumulationRegisterRecord.РезервыТоваровОрганизаций" category="Record">
+				<xr:TypeId>b676e6ed-0739-45a1-8158-87ac2ae5d51d</xr:TypeId>
+				<xr:ValueId>149bf2b4-a2d8-4c28-acb2-85c3e6349e73</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterManager.РезервыТоваровОрганизаций" category="Manager">
+				<xr:TypeId>677c4179-85ea-44b7-a1eb-e6f5eb01c3d5</xr:TypeId>
+				<xr:ValueId>9a568f8d-7c51-4444-9e54-8e1f5a4b842f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterSelection.РезервыТоваровОрганизаций" category="Selection">
+				<xr:TypeId>0afb89e4-913e-4f5b-bac5-2b65eb0f2e15</xr:TypeId>
+				<xr:ValueId>3487f3a1-47e0-4ff5-b492-3e2eae8b1c76</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterList.РезервыТоваровОрганизаций" category="List">
+				<xr:TypeId>84e0c304-4a2e-4ea9-82d0-a3ee5913ad03</xr:TypeId>
+				<xr:ValueId>d18524a2-5dca-4634-a420-b8c0e54d8e03</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordSet.РезервыТоваровОрганизаций" category="RecordSet">
+				<xr:TypeId>83e7111d-3f4a-42f5-8f06-1ed4eb0fcdd8</xr:TypeId>
+				<xr:ValueId>5738fc4e-b965-4679-8cc6-da96025e7285</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordKey.РезервыТоваровОрганизаций" category="RecordKey">
+				<xr:TypeId>26bda2a1-6c11-4ec7-9d6d-620a0f444126</xr:TypeId>
+				<xr:ValueId>9245434b-da33-4b83-9ed9-9c27a5cfea8b</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РезервыТоваровОрганизаций</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>2606a793-6365-4843-925c-ebc9d9f1c956</ExtendedConfigurationObject>
+			<RegisterType>Balance</RegisterType>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="4e07185e-ae92-4806-b545-7be534bbbfb5">
+				<InternalInfo/>
+				<Properties>
+					<Name>Количество</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>cacd74bf-8fe9-4597-a1ee-28cc4c1f546f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="abc6f9a6-7f25-45a1-b8b1-41dd08cf3a16">
+				<InternalInfo/>
+				<Properties>
+					<Name>АналитикаУчетаНоменклатуры</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>50b7d578-2737-4a38-8642-c0d7572f8b75</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>bffe622c-385c-4117-bd4e-15b72aa8e58b</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="b2f6667e-66df-4665-a6ef-4d0a2c1e4c37">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4c04a2b2-979e-477b-a824-3560ab382a0e</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>55adb97e-a84e-453e-8020-7665bb2abdef</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="558392a0-8721-4b88-9c32-69aa78b9030a">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидЗапасов</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>d927351d-c8b0-459b-a1e5-f3bd8c04386f</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeId>5cc0cff9-56e5-456c-aa95-78bba2194bee</v8:TypeId>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</AccumulationRegister>
+</MetaDataObject>
