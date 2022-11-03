@@ -104,6 +104,7 @@
 			<Catalog>Пользователи</Catalog>
 			<Catalog>КлючиАналитикиУчетаНоменклатуры</Catalog>
 			<Catalog>ВидыЗапасов</Catalog>
+			<Catalog>мн_Дизайны</Catalog>
 			<Document>БИТ_ВводНачальныхОстатковСертификации</Document>
 			<Document>БИТ_ВозвратВКарантин</Document>
 			<Document>БИТ_РегистрацияКомиссии</Document>
